@@ -2,7 +2,6 @@ package org.example.entities;
 
 public enum Genere {
     AVVENTURA,
-    AVVENTURA_GRAFICA,
     AZIONE,
     CORSA,
     CO_OP,

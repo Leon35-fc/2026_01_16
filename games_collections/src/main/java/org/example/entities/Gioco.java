@@ -1,45 +1,59 @@
 package org.example.entities;
 
-import java.util.Date;
-
 public abstract class Gioco {
-    Long id;
-    String title;
-    Date published;
-    Double price;
+    //ATTRIBUTI
+    private Long id;
+    private String titolo;
+    private int annoPubblicazione;
+    private double prezzo;
 
-    public Gioco(Long id, String title, Date published, Double price){
+    //COSTRUTTORE
+    public Gioco(Long id, String titolo, int annoPubblicazione, double prezzo) {
         this.id = id;
-        this.title=title;
-        this.published;
-        this.price;
+        this.titolo = titolo;
+        this.annoPubblicazione = annoPubblicazione;
+        this.prezzo = prezzo;
     }
 
     public Long getId() {
         return id;
     }
 
-    public String getTitle() {
-        return title;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public String getTitolo() {
+        return titolo;
     }
 
-    public Date getPublished() {
-        return published;
+    public void setTitolo(String titolo) {
+        this.titolo = titolo;
     }
 
-    public void setPublished(Date published) {
-        this.published = published;
+    public int getAnnoPubblicazione() {
+        return annoPubblicazione;
     }
 
-    public Double getPrice() {
-        return price;
+    public void setAnnoPubblicazione(int annoPubblicazione) {
+        this.annoPubblicazione = annoPubblicazione;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
+    public double getPrezzo() {
+        return prezzo;
+    }
+
+    public void setPrezzo(double prezzo) {
+        this.prezzo = prezzo;
+    }
+
+    @Override
+    public String toString() {
+        return "Games{" +
+                "id=" + id +
+                ", titolo='" + titolo + '\'' +
+        ", annoPubblicazione=" + annoPubblicazione +
+                ", prezzo=" + prezzo +
+                '}';
     }
 }
